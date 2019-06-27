@@ -12,12 +12,14 @@ const isDev = false;
 const isProd = !isDev;
 
 var cssFiles = {
-    src: './src/precss/style.less',
+    src: './src/precss/styles.less',
+    allPreFiles: './src/precss/**/*.less',
     dest: './build/css'
 }
 
 var jsFiles = {
     src: './src/prejs/scripts.js',
+    allPreFiles: './src/prejs/**/*.js',
     dest: './build/js'
 }
 
@@ -47,5 +49,11 @@ function scripts() {
       .pipe(gulp.dest(jsFiles.dest));
 }
 
+function watch(){
+  gulp.watch(cssFiles.allPreFiles, styles);
+  gulp.watch(jsFiles.allPreFiles, scripts);
+}
+
 gulp.task('style', styles);
 gulp.task('script', scripts);
+gulp.task('watch', watch);

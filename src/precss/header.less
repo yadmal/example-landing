@@ -1,0 +1,65 @@
+.header {
+  a {
+    color: @color_white;
+    text-decoration: none;
+  }
+  height: 770px;
+  background-image: url("./../img/bg.png");
+  background-size: cover;
+  color: @color_white;
+  font-family: Montserrat;
+
+  &__top {
+    padding: 32px 0 0;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+
+    nav {
+      margin-left: auto;
+    }
+
+    nav .menu {
+      display: flex;
+
+      li {
+        margin: 0 0 0 30px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        border-bottom: 2px solid rgba(0,0,0,0.0);
+
+        &:hover{
+          border-bottom: 2px solid @color_white;
+        }
+      }
+    }
+  }
+
+  &__middle {
+    text-align: center;
+    margin: 245px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .welcome {
+      font-size: 47px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .greeting {
+      margin: 15px 0 0;
+      font-family: "Roboto Slab";
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+  }
+}

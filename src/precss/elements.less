@@ -11,3 +11,31 @@
     background-color: @color_white;
   }
 }
+
+.block {
+  color: @color_grey;
+  background-color: @color_white;
+  padding: 100px 0px;
+}
+
+.blockHead{
+  text-align: center;
+  padding:0px 0px 70px 0px;
+  &__title {
+    font-family: Montserrat;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &__delimiter {
+    display: inline-block;
+    width: 50px;
+    border-bottom: 2px solid @color_grey;
+    margin: 20px 0px;
+  }
+
+  &__contain {
+    font-family: "Roboto Slab";
+    font-size: 16px;
+  }
+}

@@ -54,7 +54,6 @@
   }
 }
 
-
 .aboutus {
   background-color: #f8f8f8;
 
@@ -102,6 +101,34 @@
         font-size: 13px;
         font-weight: 400;
       }
+    }
+  }
+}
+
+.latestWorks {
+  .blockHead ul {
+    display: flex;
+    justify-content: center;
+
+    li a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: @color_grey;
+      font-family: "Roboto Slab";
+      font-size: 16px;
+      font-weight: 400;
+
+      &:hover {
+        color: @color_red;
+      }
+    }
+
+  }
+  .cards{
+    .row-flex();
+    .card{
+      .col();
+      .size(4);
     }
   }
 }

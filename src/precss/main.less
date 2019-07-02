@@ -53,3 +53,55 @@
     }
   }
 }
+
+
+.aboutus {
+  background-color: #f8f8f8;
+
+  .block {
+    background-color: inherit;
+  }
+
+  &__articles {
+    .row-flex();
+    padding: 0 0 70px;
+
+    .article {
+      .col();
+      .size(6);
+      .size-lg(6);
+      .size-md(6);
+      .size-sm(6);
+    }
+  }
+
+  .team {
+    .row-flex();
+
+    .person {
+      .col();
+      .size(3);
+      .size-lg(3);
+      .size-md(3);
+      .size-sm(6);
+      text-align: center;
+      color: @color_grey;
+
+      &__photo {}
+
+      &__name {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 15px 0;
+      }
+
+      &__position {
+        font-family: "Roboto Slab";
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+  }
+}

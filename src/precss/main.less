@@ -20,11 +20,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        //
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        color: @color_red;
         border: 2px solid #dddddd;
+        //
+        color: @color_red;
         font-size: 40px;
 
         &:hover {
@@ -122,13 +124,139 @@
         color: @color_red;
       }
     }
-
   }
-  .cards{
+
+  .cards {
+    @mt-card: 30px;
     .row-flex();
-    .card{
+    margin-top: -@mt-card;
+
+    .card {
       .col();
       .size(4);
+      margin-top: @mt-card;
     }
+  }
+}
+
+.clientProject {
+  background-blend-mode: multiply;
+  background-image: url("./../img/Layer_29.png");
+  background-color: @color_red+100;
+  background-size: cover;
+  height: 369px;
+  //
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  //
+  color: @color_white;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+
+  .appeal {
+    font-size: 30px;
+  }
+
+  .button {
+    display: inline-block;
+    font-size: 18px;
+  }
+}
+
+.recentPosts {
+  .posts {
+    .post {
+      .row-flex();
+
+      &__photo {
+        .col();
+        .size(5);
+        .size-lg(5);
+        .size-md(5);
+        .size-sm(5);
+      }
+
+      &__description {
+        .col();
+        .size(7);
+        .size-lg(7);
+        .size-md(7);
+        .size-sm(7);
+
+        .top {
+          display: flex;
+
+          .date {
+            border: 2px solid @color_grey;
+            padding: 20px;
+            margin-right: 30px;
+            color: #777777;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+
+            .day {
+              font-size: 24px;
+              letter-spacing: 2.4px;
+            }
+
+            .month {
+              letter-spacing: 1.4px;
+            }
+          }
+
+          .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &__name {
+              color: @color_red;
+              font-family: Montserrat;
+              font-size: 16px;
+              font-weight: 400;
+              text-transform: uppercase;
+            }
+
+            &__author {
+              font-family: "Roboto Slab";
+              font-size: 13px;
+              font-weight: 400;
+              font-style: italic;
+              line-height: 24px;
+              color: @color_grey;
+            }
+          }
+        }
+
+        .text {
+          margin-top: 25px;
+          margin-bottom: 30px;
+        }
+
+        .readMore {
+          font-family: "Roboto Slab";
+          font-size: 13px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1.3px;
+          &:hover{
+            cursor: pointer;
+              color: @color_red;
+          }
+        }
+      }
+    }
+
+
+  }
+  .delimiter{
+    border-bottom: 1px solid #dddddd;;
+    margin: 30px 0px;
   }
 }

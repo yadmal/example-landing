@@ -57,7 +57,7 @@
 }
 
 .aboutus {
-  background-color: #f8f8f8;
+  background-color: @color_light_grey;
 
   .block {
     background-color: inherit;
@@ -215,6 +215,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+
             &__name {
               color: @color_red;
               font-family: Montserrat;
@@ -245,18 +246,56 @@
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 1.3px;
-          &:hover{
+
+          &:hover {
             cursor: pointer;
-              color: @color_red;
+            color: @color_red;
           }
         }
       }
     }
-
-
   }
-  .delimiter{
-    border-bottom: 1px solid #dddddd;;
-    margin: 30px 0px;
+
+  .delimiter {
+    border-bottom: 1px solid #dddddd;
+    margin: 30px 0;
+  }
+}
+
+.partners {
+  background-color: @color_light_grey;
+  padding: 100px 0;
+
+  .companies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin: 0 30px;
+    }
+  }
+
+  .wishes {
+    .row-flex();
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: @color_grey;
+    font-family: "Roboto Slab";
+    font-weight: 400;
+
+    .text {
+      .col();
+      .size(8);
+      font-size: 18px;
+      font-style: italic;
+      line-height: 30px;
+      margin: 80px 0 25px;
+    }
+
+    .author {
+      font-size: 20px;
+    }
   }
 }
